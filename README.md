@@ -1,4 +1,4 @@
-# Polymorphism
+# Observer pattern lab 
 
 ### Getting started
 - Fork and clone repo
