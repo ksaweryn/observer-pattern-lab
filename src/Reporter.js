@@ -1,4 +1,6 @@
-class Reporter {
+const Spectator = require("./Spectator");
+
+class Reporter extends Spectator {
   react(scoringTeam) {
     return "Goal by " + scoringTeam;
   }

@@ -1,11 +1,15 @@
 class FootballGame {
   constructor(reporter) {
     this.reporter = reporter;
+    this.spectators = [reporter];
   }
 
   teamScored(scoringTeam) {
-    // implementation here
-    this.reporter.react("Team A");
+    this.spectators.forEach(spectator => spectator.react(scoringTeam));
+  }
+
+  addSpectators(spectator) {
+    this.spectators.push(spectator);
   }
 }
 
