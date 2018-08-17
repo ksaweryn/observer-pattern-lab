@@ -3,9 +3,13 @@ class FootballGame {
     this.reporter = reporter;
   }
 
-  teamScored(scoringTeam) {
+  notifyObservers(scoringTeam) {
     // implementation here
-    this.reporter.react("Team A");
+    this.reporter.respond("Team A");
+  }
+
+  subscribe(subscriber) {
+    this
   }
 }
 

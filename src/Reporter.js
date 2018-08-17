@@ -1,6 +1,6 @@
 class Reporter {
-  react(scoringTeam) {
-    return "Goal by " + scoringTeam;
+  respond(scoringTeam) {
+    return `GOAL BY ${scoringTeam}!`;
   }
 }
 

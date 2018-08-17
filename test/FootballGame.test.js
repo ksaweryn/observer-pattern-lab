@@ -5,19 +5,13 @@ describe("FootballGame", () => {
   let footballGame;
 
   beforeEach(() => {
-    reporter = { react: jest.fn() };
+    reporter = { respond: jest.fn() };
     footballGame = new FootballGame(reporter);
   });
 
-  it("reporter should react to goal by Team A when Team A stores", () => {
+  it("reporter should react to goal by Team A when Team A scores", () => {
     const SCORING_TEAM = "Team A";
-    footballGame.teamScored(SCORING_TEAM);
-    expect(reporter.react).toBeCalledWith(SCORING_TEAM);
-  });
-
-  it.skip("reporter should react to goal by Team B when Team A stores", () => {
-    const SCORING_TEAM = "Team B";
-    footballGame.teamScored(SCORING_TEAM);
-    expect(reporter.react).toBeCalledWith(SCORING_TEAM);
+    footballGame.notifyObservers(SCORING_TEAM);
+    expect(reporter.respond).toBeCalledWith(SCORING_TEAM);
   });
 });
